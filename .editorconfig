@@ -1,0 +1,15 @@
+# Верхнеуровневый файл конфигурации для проекта
+root = true
+
+# Общие настройки для всех файлов
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Настройки для файлов JavaScript и JSON
+[*.{js,json}]
+indent_size = 2
