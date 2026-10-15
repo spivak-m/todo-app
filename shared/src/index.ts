@@ -1,6 +1,4 @@
-export const hello = 'hello from shared';
+import type { Todo } from './types/todo'
 
-export interface User {
-  id: number;
-  email: string;
-}
+export { Todo }
+
