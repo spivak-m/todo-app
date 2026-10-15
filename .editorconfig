@@ -10,6 +10,6 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-# Настройки для файлов JavaScript и JSON
-[*.{js,json}]
+# Настройки для файлов JavaScript, TypeScript и JSON
+[*.{js,ts,json}]
 indent_size = 2
