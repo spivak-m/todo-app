@@ -1,0 +1,6 @@
+{
+  "migrationsTable": "pgmigrations",
+  "dir": "migrations",
+  "migrationFileLanguage": "ts",
+  "databaseUrl": { "env": "DATABASE_URL" }
+}
