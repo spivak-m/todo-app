@@ -1,12 +1,6 @@
 import type { ErrorRequestHandler } from "express";
 import { z, ZodError } from "zod";
-
-// Кастомный класс для ошибок с HTTP-статусом
-export class HttpError extends Error {
-  constructor(public status: number, message: string) {
-    super(message);
-  }
-}
+import { HttpError } from "../utils/HttpError.js";
 
 export const errorHandler: ErrorRequestHandler = (err, _req, res) => {
   if(err instanceof HttpError) {

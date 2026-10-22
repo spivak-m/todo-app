@@ -1,6 +1,6 @@
 import type { CreateTodoInput, UpdateTodoInput } from "shared";
 import * as todoRepository from "../repositories/todo.repository";
-import { HttpError } from "../middlewares/errorHandler";
+import { HttpError } from "../utils/HttpError.js";
 
 export function getAll(userId: number) {
   return todoRepository.findAllByUser(userId);
