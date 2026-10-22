@@ -2,9 +2,12 @@ import { Router } from "express";
 import * as todoController from "../controllers/todo.controller";
 import { validate } from "../middlewares/validate";
 import { asyncHandler } from "../middlewares/asyncHandler";
+import { requireAuth } from "../middlewares/auth.middleware";
 import { createTodoSchema, updateTodoSchema } from "shared";
 
 const router = Router();
+
+router.use(requireAuth)
 
 router.get(
   "/",
