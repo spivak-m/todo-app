@@ -1,7 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { useAppStore } from './stores/app';
+
+  const appStore = useAppStore()
+</script>
 
 <template>
-  <h1>You did it!</h1>
+  <span v-if="!appStore.isAppInitialized">инициализация...</span>
+  <RouterView v-else />
 </template>
-
-<style scoped></style>
