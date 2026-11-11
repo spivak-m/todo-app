@@ -2,7 +2,7 @@ import type { ErrorRequestHandler } from "express";
 import { z, ZodError } from "zod";
 import { HttpError } from "../utils/HttpError.js";
 
-export const errorHandler: ErrorRequestHandler = (err, _req, res) => {
+export const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
   if(err instanceof HttpError) {
     res.status(err.status).json({ error: err.message });
     return;

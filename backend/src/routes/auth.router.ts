@@ -29,7 +29,7 @@ router.post(
   asyncHandler(authController.logout)
 );
 
-router.post(
+router.get(
   '/me',
   requireAuth,
   asyncHandler(authController.me)
